@@ -1,0 +1,53 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+h1  {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 5%;
+    color: #fff;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #828282;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        'bomba1 bomba2 bomba3'
+        'bomba4 bomba5 bomba6'
+        'bomba7 bomba8 bomba9';
+    grid-gap: 20px;
+    
+}
+
+.bomba {
+
+    background-image: url('../img/bomba.png');
+    width: 245px;
+    height: 245px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 20%;
+    border-radius: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-image 0.3s, opacity 0.3s;
+}
+
+.bomba:hover {
+    background-image: url('../img/explosion.png');
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+.bomba.segura:hover {
+    background-image: url('../img/extintor.png');
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+}
